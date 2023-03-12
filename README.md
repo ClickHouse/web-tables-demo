@@ -9,7 +9,7 @@ See https://clickhouse.com/docs/en/getting-started/example-datasets/uk-price-pai
 # Download ClickHouse:
 $ curl https://clickhouse.com/ | sh
 
-$ clickhouse-local 
+$ ./clickhouse local 
 ClickHouse local version 23.3.1.2537.
 
 :) CREATE DATABASE test;
