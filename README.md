@@ -31,7 +31,7 @@ ClickHouse local version 25.3.1.1.
 )
 ENGINE = MergeTree
 ORDER BY (postcode1, postcode2, addr1, addr2)
-SETTINGS table_disk = 1, disk = disk(type = web, endpoint = 'https://raw.githubusercontent.com/ClickHouse/web-tables-demo/main/web/store/cf7/cf712b4f-2ca8-435c-ac23-c4393efe52f7/')
+SETTINGS table_disk = 1, disk = disk(type = web, endpoint = 'https://raw.githubusercontent.com/ClickHouse/web-tables-demo/table_disk/uk_price_paid/')
 
 Query id: 21982815-9290-44e6-bc99-595ab0080411
 
