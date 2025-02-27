@@ -10,17 +10,9 @@ See https://clickhouse.com/docs/en/getting-started/example-datasets/uk-price-pai
 $ curl https://clickhouse.com/ | sh
 
 $ ./clickhouse local 
-ClickHouse local version 23.3.1.2537.
+ClickHouse local version 25.3.1.1.
 
-:) CREATE DATABASE test;
-
-Ok.
-
-:) USE test;
-
-Ok.
-
-:) ATTACH TABLE uk_price_paid UUID 'cf712b4f-2ca8-435c-ac23-c4393efe52f7'
+:) CREATE TABLE uk_price_paid
 (
     price UInt32,
     date Date,
@@ -39,7 +31,7 @@ Ok.
 )
 ENGINE = MergeTree
 ORDER BY (postcode1, postcode2, addr1, addr2)
-SETTINGS disk = disk(type = web, endpoint = 'https://raw.githubusercontent.com/ClickHouse/web-tables-demo/main/web/')
+SETTINGS table_disk = 1, disk = disk(type = web, endpoint = 'https://raw.githubusercontent.com/ClickHouse/web-tables-demo/main/web/store/cf7/cf712b4f-2ca8-435c-ac23-c4393efe52f7/')
 
 Query id: 21982815-9290-44e6-bc99-595ab0080411
 
